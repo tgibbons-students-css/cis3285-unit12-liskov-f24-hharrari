@@ -6,14 +6,9 @@ using System.Threading.Tasks;
 
 namespace SubtypeCovariance
 {
-    public class Entity
+    public class Entity(Guid newID)
     {
-        public Entity(Guid newID)
-        {
-            ID = newID;
-        }
-
-        public Guid ID { get; set; }
+        public Guid ID { get; set; } = newID;
 
         public string Name { get; set; }
     }
